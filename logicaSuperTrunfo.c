@@ -5,7 +5,7 @@
 
 int main() {
     // Definição das variáveis para armazenar as propriedades das cidades
-    char estadoCarta1, estadoCarta2, codigoCarta1[5], codigoCarta2[5], cidadeCarta1[30], cidadeCarta2[30];
+    char estadoCarta1, estadoCarta2, codigoCarta1[3], codigoCarta2[3], cidadeCarta1[20], cidadeCarta2[20];
     unsigned int populacaoCarta1, populacaoCarta2, pontosTuristicosCarta1, pontosTuristicosCarta2;
     float areaCarta1, areaCarta2, pibCarta1, pibCarta2;
     float densidadeCarta1, densidadeCarta2, pibPerCapitaCarta1, pibPerCapitaCarta2;
@@ -13,31 +13,31 @@ int main() {
     // Cadastro das Cartas:
     //Carta 1
     // Realizando a entrada de dados referente ao Estado, utilizando da letra A até H para representar os 8 estados
-    printf("Informe o estado ('A até H'): ");
-    scanf("%c", &estadoCarta1);
+    printf("Informe o estado ('A até H'):\n");
+    scanf(" %c", &estadoCarta1);
 
     // Realizando a entrada de dados referente ao código da carta, letra seguida de número 1 ao 4
-    printf("Informe o código da carta: ");
-    scanf("%s", &codigoCarta1);
+    printf("Informe o código da carta:\n");
+    scanf("%s", codigoCarta1);
 
     // Realizando a entrada de dados referente ao nome da cidade
-    printf("Informe o nome da cidade: ");
-    scanf("%s", &cidadeCarta1);
+    printf("Informe o nome da cidade:\n");
+    scanf("%s", cidadeCarta1);
 
     // Realizando a entrada de dados refente ao número de habitantes da cidade
-    printf("Informe o número de habitantes da cidade: ");
+    printf("Informe o número de habitantes da cidade:\n");
     scanf("%u", &populacaoCarta1);
 
     // Realizando a entrada de dados referente à área da cidade (em km²)
-    printf("Informe a área da cidade em km²: ");
+    printf("Informe a área da cidade em km²:\n");
     scanf("%f", &areaCarta1);
 
     // Realizando a entrada de dados referente ao PIB
-    printf("Informe o PIB: ");
+    printf("Informe o PIB:\n");
     scanf("%f", &pibCarta1);
 
     // Realizando a entrada de dados referente ao número de pontos turisticos
-    printf("Informe a quantidade de pontos turísticos: ");
+    printf("Informe a quantidade de pontos turísticos:\n");
     scanf("%u", &pontosTuristicosCarta1);
 
     densidadeCarta1 = populacaoCarta1 / areaCarta1;
@@ -45,31 +45,31 @@ int main() {
 
     //Carta 2
     // Realizando a entrada de dados referente ao Estado, utilizando da letra A até H para representar os 8 estados
-    printf("Informe o estado ('A até H'): ");
-    scanf("%c", &estadoCarta2);
+    printf("Informe o estado ('A até H'):\n");
+    scanf(" %c", &estadoCarta2);
 
     // Realizando a entrada de dados referente ao código da carta, letra seguida de número 1 ao 4
-    printf("Informe o código da carta: ");
+    printf("Informe o código da carta:\n");
     scanf("%s", &codigoCarta2);
 
     // Realizando a entrada de dados referente ao nome da cidade
-    printf("Informe o nome da cidade: ");
+    printf("Informe o nome da cidade:\n");
     scanf("%s", &cidadeCarta2);
 
     // Realizando a entrada de dados refente ao número de habitantes da cidade
-    printf("Informe o número de habitantes da cidade: ");
+    printf("Informe o número de habitantes da cidade:\n");
     scanf("%u", &populacaoCarta2);
 
     // Realizando a entrada de dados referente à área da cidade (em km²)
-    printf("Informe a área da cidade em km²: ");
+    printf("Informe a área da cidade em km²:\n");
     scanf("%f", &areaCarta2);
 
     // Realizando a entrada de dados referente ao PIB
-    printf("Informe o PIB: ");
+    printf("Informe o PIB:\n");
     scanf("%f", &pibCarta2);
 
     // Realizando a entrada de dados referente ao número de pontos turisticos
-    printf("Informe a quantidade de pontos turísticos: ");
+    printf("Informe a quantidade de pontos turísticos:\n");
     scanf("%u", &pontosTuristicosCarta2);
 
     densidadeCarta2 = populacaoCarta2 / areaCarta2;
@@ -90,6 +90,9 @@ int main() {
         printf("Carta 02 - %s: %.2f.\n", cidadeCarta2, pibPerCapitaCarta2);
         printf("Resultado: Carta 02 (%s) venceu!\n", cidadeCarta2);
     }
+
+    printf("%s", cidadeCarta1);
+    printf("%s", cidadeCarta2);
 
     return 0;
 }
