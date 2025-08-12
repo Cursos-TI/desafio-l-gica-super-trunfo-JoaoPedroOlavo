@@ -84,15 +84,15 @@ int main() {
         printf("Carta 01 - %s: %.2f.\n", cidadeCarta1, pibPerCapitaCarta1);
         printf("Carta 02 - %s: %.2f.\n", cidadeCarta2, pibPerCapitaCarta2);
         printf("Resultado: Carta 01 (%s) venceu!\n", cidadeCarta1);
-    } else if (pibPerCapitaCarta2 > pibPerCapitaCarta1) {
+    } else if (pibPerCapitaCarta1 < pibPerCapitaCarta2) {
         printf("Comparação de cartar: Atributo (PIB Per Capita).\n");
-        printf("Carta 01 - %s: %.2f.\n", cidadeCarta1, pibPerCapitaCarta1);
-        printf("Carta 02 - %s: %.2f.\n", cidadeCarta2, pibPerCapitaCarta2);
+        printf("Carta 01 - %s: %f.\n", cidadeCarta1, pibPerCapitaCarta1);
+        printf("Carta 02 - %s: %f.\n", cidadeCarta2, pibPerCapitaCarta2);
         printf("Resultado: Carta 02 (%s) venceu!\n", cidadeCarta2);
     }else {
         printf("Comparação de cartar: Atributo (PIB Per Capita).\n");
-        printf("Carta 01 - %s: %.2f.\n", cidadeCarta1, pibPerCapitaCarta1);
-        printf("Carta 02 - %s: %.2f.\n", cidadeCarta2, pibPerCapitaCarta2);
+        printf("Carta 01 - %s: %f.\n", cidadeCarta1, pibPerCapitaCarta1);
+        printf("Carta 02 - %s: %f.\n", cidadeCarta2, pibPerCapitaCarta2);
         printf("Resultado: Empate!\n", cidadeCarta2);
     }
     return 0;
