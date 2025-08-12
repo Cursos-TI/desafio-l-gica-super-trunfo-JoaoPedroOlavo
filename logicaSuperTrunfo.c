@@ -15,6 +15,7 @@ int main() {
     // Realizando a entrada de dados referente ao Estado, utilizando da letra A até H para representar os 8 estados
     printf("Informe o estado ('A até H'):\n");
     scanf(" %c", &estadoCarta1);
+    while (getchar() != '\n' && getchar() != EOF);
 
     // Realizando a entrada de dados referente ao código da carta, letra seguida de número 1 ao 4
     printf("Informe o código da carta:\n");
@@ -47,6 +48,7 @@ int main() {
     // Realizando a entrada de dados referente ao Estado, utilizando da letra A até H para representar os 8 estados
     printf("Informe o estado ('A até H'):\n");
     scanf(" %c", &estadoCarta2);
+    while (getchar() != '\n' && getchar() != EOF);
 
     // Realizando a entrada de dados referente ao código da carta, letra seguida de número 1 ao 4
     printf("Informe o código da carta:\n");
