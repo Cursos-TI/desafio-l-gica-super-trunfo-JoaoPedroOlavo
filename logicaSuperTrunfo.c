@@ -18,11 +18,11 @@ int main() {
 
     // Realizando a entrada de dados referente ao código da carta, letra seguida de número 1 ao 4
     printf("Informe o código da carta:\n");
-    scanf("%s", codigoCarta1);
+    fgets(codigoCarta1, sizeof(codigoCarta1), stdin);
 
     // Realizando a entrada de dados referente ao nome da cidade
     printf("Informe o nome da cidade:\n");
-    scanf("%s", cidadeCarta1);
+    fgets(cidadeCarta1, sizeof(cidadeCarta1), stdin);
 
     // Realizando a entrada de dados refente ao número de habitantes da cidade
     printf("Informe o número de habitantes da cidade:\n");
@@ -40,7 +40,7 @@ int main() {
     printf("Informe a quantidade de pontos turísticos:\n");
     scanf("%u", &pontosTuristicosCarta1);
 
-    densidadeCarta1 = populacaoCarta1 / areaCarta1;
+    densidadeCarta1 = (float)populacaoCarta1 / areaCarta1;
     pibPerCapitaCarta1 = pibCarta1 / populacaoCarta1;
 
     //Carta 2
@@ -50,11 +50,11 @@ int main() {
 
     // Realizando a entrada de dados referente ao código da carta, letra seguida de número 1 ao 4
     printf("Informe o código da carta:\n");
-    scanf("%s", &codigoCarta2);
+    fgets(codigoCarta2, sizeof(codigoCarta2), stdin);
 
     // Realizando a entrada de dados referente ao nome da cidade
     printf("Informe o nome da cidade:\n");
-    scanf("%s", &cidadeCarta2);
+    fgets(cidadeCarta2, sizeof(cidadeCarta2), stdin);
 
     // Realizando a entrada de dados refente ao número de habitantes da cidade
     printf("Informe o número de habitantes da cidade:\n");
@@ -72,7 +72,7 @@ int main() {
     printf("Informe a quantidade de pontos turísticos:\n");
     scanf("%u", &pontosTuristicosCarta2);
 
-    densidadeCarta2 = populacaoCarta2 / areaCarta2;
+    densidadeCarta2 = (float)populacaoCarta2 / areaCarta2;
     pibPerCapitaCarta2 = pibCarta2 / populacaoCarta2;
 
 
@@ -84,15 +84,16 @@ int main() {
         printf("Carta 01 - %s: %.2f.\n", cidadeCarta1, pibPerCapitaCarta1);
         printf("Carta 02 - %s: %.2f.\n", cidadeCarta2, pibPerCapitaCarta2);
         printf("Resultado: Carta 01 (%s) venceu!\n", cidadeCarta1);
-    } else {
+    } else if (pibPerCapitaCarta2 > pibPerCapitaCarta1) {
         printf("Comparação de cartar: Atributo (PIB Per Capita).\n");
         printf("Carta 01 - %s: %.2f.\n", cidadeCarta1, pibPerCapitaCarta1);
         printf("Carta 02 - %s: %.2f.\n", cidadeCarta2, pibPerCapitaCarta2);
         printf("Resultado: Carta 02 (%s) venceu!\n", cidadeCarta2);
+    }else {
+        printf("Comparação de cartar: Atributo (PIB Per Capita).\n");
+        printf("Carta 01 - %s: %.2f.\n", cidadeCarta1, pibPerCapitaCarta1);
+        printf("Carta 02 - %s: %.2f.\n", cidadeCarta2, pibPerCapitaCarta2);
+        printf("Resultado: Empate!\n", cidadeCarta2);
     }
-
-    printf("%s", cidadeCarta1);
-    printf("%s", cidadeCarta2);
-
     return 0;
 }
